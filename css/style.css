@@ -4,6 +4,8 @@
 }
 body {
   font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  background: url(../assets/waterfall.jpg) no-repeat center center fixed;
+  background-size: cover;
 }
 
 #myVideo {
