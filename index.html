@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animate.css">
+</head>
+  <body>
+    <video autoplay muted loop id="myVideo">
+        <source src="./assets/waterfall.mp4.mp4" type="video/mp4">
+    </video>
+    <div class="bird-container bird-container--one"><div class="bird bird--one"></div></div>
+    <div class="bird-container bird-container--two"><div class="bird bird--two"></div></div>
+    <div class="bird-container bird-container--three"><div class="bird bird--three"></div></div>
+    <div class="bird-container bird-container--four"><div class="bird bird--four"></div></div>
+    <div class="bird-container bird-container--five"><div class="bird bird--five"></div></div>
+    <div class="bird-container bird-container--six"><div class="bird bird--six"></div></div>
+    <div class="bird-container bird-container--seven"><div class="bird bird--seven"></div></div>
+    <div class="bird-container bird-container--eight"><div class="bird bird--eight"></div></div>   
+    <div class="container1">
+      <div class="center">
+        <img src="./assets/pyrexia-logo.png" class="animated zoomInDown delay-1s" id="logo" >
+        <h1 class="time" id="countDown" >Comming Soon</h1>
+      </div>
+    </div>
+
+
+    
+    <!-- <iframe width="0" height="0" src="https://www.youtube.com/embed/MPUBSZYESgU?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+    
+    <div id="typed-strings">
+      <p>Typed.js is a <strong>JavaScript</strong> library.</p>
+      <p>It <em>types</em> out sentences.</p>
+    </div>
+    <span id="typed"></span>
+    <script>
+     var options = {
+       strings: ['<i>First</i> sentence.', '&amp; a second sentence.'],
+       typeSpeed: 40
+        };
+
+      var typed = new Typed('.element', options);
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./js/birds.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script>
+        var countDownDate = new Date("Apr 4,2020 00:00:00").getTime();
+        var countDownFuncion = setInterval(function(){
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+            var days = Math.floor(distance / (1000*3600*24));
+            var hours = Math.floor((distance % (1000*3600*24))/(1000*3600));
+            var minutes = Math.floor((distance % (1000*3600))/(1000*60));
+            var seconds = Math.floor((distance % (1000*60))/(1000));
+            var timeString  = days + "d:" + hours + "h:" + minutes + "m:" + seconds + "s";
+            document.getElementById("countDown").innerHTML = timeString;
+           
+        },1000);
+
+        var options = {
+          strings: ['<i>First</i> sentence.', '&amp; a second sentence.'],
+          typeSpeed: 40
+        };
+
+        var typed = new Typed('.element', options);
+    </script>
+
+  </body>
+</html>
