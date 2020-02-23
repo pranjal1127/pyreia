@@ -10,8 +10,16 @@
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/animate.css">
+    <script>
+      $(window).load(function() {
+        $('.preloader').fadeOut('slow');
+      });
+    </script>
 </head>
   <body>
+    <div class="preloader">
+      <div class="back"></div><div class="heart"></div>
+    </div>
     <video autoplay muted loop id="myVideo">
         <source src="./assets/waterfall.mp4.mp4" type="video/mp4">
     </video>
@@ -51,6 +59,18 @@
     <script src="./js/birds.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <script>
+    $(document).ready(function() {
+      //Preloader
+      preloaderFadeOutTime = 500;
+      function hidePreloader() {
+      var preloader = $('.preloader');
+      preloader.fadeOut(preloaderFadeOutTime);
+      }
+      hidePreloader();
+      });
+      </script>
+    <script>
+         
         var countDownDate = new Date("Apr 4,2020 00:00:00").getTime();
         var countDownFuncion = setInterval(function(){
             var now = new Date().getTime();
@@ -71,6 +91,8 @@
 
         var typed = new Typed('.element', options);
     </script>
+    <script src="./js/jquery-3.4.1.js"></script>
 
   </body>
 </html>
+
