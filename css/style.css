@@ -5,6 +5,9 @@ body {
   background-size: cover;
 }
 /* ===========================preloader============================================= */
+.preloader{
+  z-index: +5;
+}
 .back {
   position: fixed;
   padding: 0;
