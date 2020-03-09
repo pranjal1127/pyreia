@@ -96,15 +96,16 @@ z-index: +12;
 }
 
 .topnav a {
-display: block;
+float: right;
+display:block;
 color: #fff;
 text-align: center;
 font-family: 'Kaushan Script' ;
-padding: 14px 16px;
-margin: 10px 20px;
+padding: 14px 10px;
+margin: 10px 15px;
 text-decoration: none;
 font-size: 20px;
-float: right;
+
 }
 .topnav a:hover{
 color: green;
@@ -129,7 +130,8 @@ display: none;
 
 @media screen and (max-width: 600px) {
 .topnav a {
-  display: none;
+  float: right;
+  display: block;
 }
 .topnav a.icon {
   float: right;
@@ -157,7 +159,6 @@ display: none;
 }
 .topnav.responsive a {
   margin: 0px;
-  float: right ;
   display: block;
   text-align: center;
   font-weight: 100;
@@ -376,7 +377,6 @@ position: relative;
 .container1{
 width: 100vw;
 height: 100vh;
-position: fixed;
 background-image: url(../assets/rishi.jpg);
 background-size: cover;
 background-position: center;
